@@ -3,19 +3,18 @@
 @import
     'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
 html {
     height: 100%;
     width: 100%;
-/*    background-image: url("images/JapanKoi.png");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: 50% 35%;*/
-/*    background-size: contain;*/
+    background-color: #18181E;
+    color: #DEC79B;
 }
 
 body {
     margin: 10px;
     height: 100%;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .item1 { grid-area: header1; }
@@ -58,12 +57,12 @@ ul li a {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: #DEC79B;
     padding-top: 10px;
     padding-bottom: 5px;
     overflow: hidden;
     line-height: 24px;
-    font-family: "Dolis", "Poppins", sans-serif;
+    font-family: "Dosis", sans-serif;
 }
 
 ul li a:before, ul li a:after {
@@ -75,8 +74,8 @@ ul li a:before, ul li a:after {
 ul li a:before {
     bottom: 0;
     width: 100%;
-    height: 3px;
-    background: #25272B;
+    height: 2.5px;
+    background: white;
     transform: translateX(-100%);
 }
 
@@ -101,24 +100,37 @@ li + li {
 }
 
 h1 {
-    color: black;
-    font-family: "Dosis", "Poppins", sans-serif;
-    font-size: 54px;
+    font-family: "Dosis", sans-serif;
+    font-size: 60px;
+    
     margin: 0;
+    margin-top: 30px;
     position: absolute;
     top: 0;
 }
 
 h2 {
-    font-family: "Dosis", "Poppins", sans-serif;
+    font-family: "Dosis", sans-serif;
     font-size: 30px;
     margin-top: 30px;
+    color: black;
+}
+
+.item3, .item4 {
+    min-width: 200px;
+}
+
+.item5 {
+    min-width: 400px;
+    position: relative;
 }
 
 .box {
-    border: 5px solid black;
-    margin-left: 0;
-    margin-right: auto;
+    border: 5px solid;
+    margin: 0;
+    margin-bottom: 100px;
+    bottom: 0;
+    position: absolute;
     height: 60%;
     width: 90%;
     max-width: 600px;
@@ -127,6 +139,7 @@ h2 {
     background-position: 50% 50%;
     background-color: rgba(255, 255, 255, 0.3);
     background-blend-mode: lighten;
+    text-align: center;
 }
 
 .flex-box {
@@ -149,14 +162,14 @@ h2 {
 .btn-text {
 /*    border: 1px solid black;*/
     margin: auto;
-    max-width: 150px;
+    max-width: 140px;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: default;
 }
 
 .button {
     font-size: 1.5rem;
-    border: 3px dashed black;
+    border: 3px dashed ;
     border-radius: 100px;
     width: 40px;
     height: 40px;
@@ -173,6 +186,13 @@ h2 {
     text-align: center;
 }
 
+.home {
+    background-color: white;
+    padding: 0;
+    border: 3px solid #DEC79B;
+    margin-top: 10px;
+}
+
 .button:hover {
     width: 125px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -187,24 +207,27 @@ h2 {
     transition: .05s
 }
 
-.item3, .item4 {
-/*    width: 150px;*/
-}
-
-.item6, .item5 {
+.item6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     text-align: center;
+    font-family: "Dosis", sans-serif;
 }
 
-.item6 > div {
+.link-wrap {
     height: 150px;
     width: 60%;
-    border: 4px solid black;
+    border: 4px solid #DEC79B;
     border-radius: 25px;
     margin: 15px auto 15px auto;
+    overflow: hidden;
+}
+
+.link-wrap > div {
+    height: 100%;
+    width: 100%;
     background-position: center;
     
     -webkit-filter: grayscale(100%);
@@ -214,28 +237,30 @@ h2 {
     cursor: pointer;
 }
 
-.item6 > div:hover {
+.link-wrap > div:hover {
     -webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
 
-.item6 > div:hover .text-bg {
+.link-wrap:hover {
+    border-color: white;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.link-wrap > div:hover .text-bg {
     opacity: 1;
 }
 
 .text-bg {
-    min-width: 85px;
     transition: .5s ease-in-out;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
-    background-color: black;
     color: white;
-    padding: 0 5px;
     font-size: 20px;
-    border-radius: 8px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
@@ -243,11 +268,11 @@ h2 {
 .link1 { background-image: url("images/HotAirBalloons2.png"); }
 .link2 { background-image: url(images/AloneDeerMountains1.png);}
 .link3 { background-image: url(images/BeautyMinimalHouse1.png); }
-.link4 { background-image: url(images/DesertNight.png);}
+.link4 { background-image: url(images/BeautyPlace1.png);}
 
 @media only screen and (max-width: 900px) {
     h1 {
-        font-size: 40px;
+        font-size: 44px;
     }
     
     h2 {
@@ -259,10 +284,10 @@ h2 {
     }
     
     .item3, .item4 {
-        width: 50px;
+        min-width: 50px;
     }
     
-    .item6 > div {
+    .link-wrap {
         height: 120px;
         width: 60%;
     }
