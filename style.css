@@ -79,10 +79,6 @@ ul li a:before {
     transform: translateX(-100%);
 }
 
-.home:before {
-    height: 0;
-}
-
 ul li a:hover:before {
     transform: translateX(0);
 }
@@ -101,8 +97,7 @@ li + li {
 
 h1 {
     font-family: "Dosis", sans-serif;
-    font-size: 60px;
-    
+    font-size: 60px;  
     margin: 0;
     margin-top: 30px;
     position: absolute;
@@ -114,6 +109,10 @@ h2 {
     font-size: 30px;
     margin-top: 30px;
     color: black;
+}
+
+.item2 {
+    text-align: center;
 }
 
 .item3, .item4 {
@@ -128,8 +127,8 @@ h2 {
 .box {
     border: 5px solid;
     margin: 0;
-    margin-bottom: 100px;
     bottom: 0;
+    margin-bottom: 100px;
     position: absolute;
     height: 60%;
     width: 90%;
@@ -148,6 +147,7 @@ h2 {
     text-align: center;
     margin: 10px;
     justify-content: center;
+/*    border: 5px solid black;*/
 }
 
 .btn-container {
@@ -216,6 +216,10 @@ h2 {
     font-family: "Dosis", sans-serif;
 }
 
+/*.link-def { display: none; }*/
+
+.link-alt { display: none; }
+
 .link-wrap {
     height: 150px;
     width: 60%;
@@ -283,6 +287,14 @@ h2 {
         font-size: 16px;
     }
     
+    .item2 > ul {
+        display: none;
+    }
+    
+    .hamburger {
+        display: inline-block;
+    }
+    
     .item3, .item4 {
         min-width: 50px;
     }
@@ -290,6 +302,7 @@ h2 {
     .link-wrap {
         height: 120px;
         width: 60%;
+        min-width: 140px;
     }
     
     .box {
@@ -297,10 +310,12 @@ h2 {
         width: 90%;
         max-width: 700px;
     }
+    
     .btn-container {
         min-width: 150px;
     }
 }
+
 
 
 
