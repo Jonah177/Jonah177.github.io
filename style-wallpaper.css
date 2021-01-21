@@ -55,7 +55,6 @@ h1 {
     width: 150px;
     border: 2px solid #BFC0C0;
     margin: 20px;
-    color: #BFC0C0;
     text-transform: uppercase;
     text-decoration: none;
     font-size: .8em;
@@ -67,54 +66,9 @@ h1 {
     cursor: pointer;
 }
 
-.drop-box {
-    display: block;
-    width: 100%;    
-    text-align: center;
-}
-
-.dropdown {
-    position: relative;
-    overflow: visible;
-}
-
-.drop-content {
-    display: none;
-    position: absolute;
-    background-color: #18181E;
-    z-index: 1;
-    width: 150px;
-/*    margin-left: -2px;*/
-    margin-top: 14px;
-/*    border: 2px solid #BFC0C0;*/
-}
-
-.drop-content a {
-    color: #BFC0C0;
-    padding: 12px 16px;
-    margin-top: 40px;
-    display: block;
-/*    border: 2px solid #BFC0C0;*/
-    border-top: 2px solid #BFC0C0;
-    border-bottom: 2px solid #BFC0C0;
-}
-
-.drop-content a:hover {
-    background-color: #BFC0C0;
-    color: #2D3142;
-}
-
-.dropdown:hover .drop-content {
-    display: block;
-}
-
-a {
-    color: #BFC0C0;
+.button a {
     text-decoration: none;
     letter-spacing: 1px;
-}
-
-.button a {
     position: relative;
     transition: all .45s ease-Out;
 }
@@ -130,9 +84,10 @@ a {
     transition: all .5s ease-Out;
     top: 20px;
     left: 70px;
+    border: 2px solid #DEC79B;
 }
 
-.button:hover #circle {
+.button:hover > #circle {
     width: 200%;
     height: 500%;
     opacity: 1;
@@ -140,23 +95,81 @@ a {
     left: -70px;
 }
 
-.btn:hover a {
+.button:hover > a {
     color: #2D3142;
 }
 
-.item3 {
-/*    border: 5px solid green;*/
+#category {
+    overflow: visible;
 }
 
-.item4 {
-    max-width: 400px;
-/*    border: 5px solid yellow;*/
+#category:hover {
+    background: #BFC0C0;
+    transition: all .5s ease-Out;
+}
+
+#category:hover .dropdown {
+    display: block;
+    transition: all .5s ease-Out;
+}
+
+.dropdown {
+    display: none;
+/*    border: 2px solid red;*/
+    position: absolute;
+    left: 152px;
+    top: -2px; 
+}
+
+.drop-button {
+    margin: 0 20px 40px 20px;
+    font-size: 1em; 
+    background: #18181E;
+}
+
+.drop-button:hover > a {
+    color: #2D3142;
+}
+
+#drop-00:hover > a { color: teal; }
+#drop-11:hover > a { color: red; }
+#drop-12:hover > a { color: blue; }
+#drop-13:hover > a { color: green; }
+#drop-14:hover > a { color: yellow; }
+
+.item3 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+/*    border: 5px solid green; */
+}
+
+.item3 > div {
+    flex: 1;
+    min-width: 25%;
+    margin: 5px;
+    border: 2px solid red;
+    background: no-repeat;
+    background-size: 100%;
+}
+
+.item4 { 
+    max-width: 400px; 
+/*        border: 5px solid yellow; */
 }
 
 @media only screen and (max-width: 900px) {
     .item3, .top-mid {
         grid-column-start: 2;
         grid-column-end: 4;
+    }
+    
+    .item3 > div {
+        min-width: 45%;
+    }
+    
+    #pic-box-05, #pic-box-06 {
+        display: none;
     }
     
     .item4, .top-right {

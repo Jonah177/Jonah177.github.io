@@ -5,9 +5,10 @@
         <meta content="width=device-width, initial scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style-wallpaper.css">
+        <script src="script-wallpaper.js"></script>
         <title>Wallpapers</title>
     </head>
-    <body>
+    <body onload="loadPictures()">
         <div class="top-bar">
             <div class="top-left">
                 <a class ="home" href="index.html">
@@ -15,7 +16,9 @@
                 </a>
             </div>
             <div class="top-mid">
-                <h1>Category Name</h1>
+                <div style="display: inline-block;">
+                    <h1 id="h1-category" style="border-bottom: 5px solid #DEC79B;">All Pictures</h1>
+                </div>
             </div>          
             <div class="top-right">
                 <h1>Featured</h1>
@@ -23,40 +26,60 @@
         </div>
         <div class="wrap">
             <div class="item2">
-                <div class="button dropdown">
-                    <div class="drop-box">
-                        <a href="#">Category</a>
-                        <div class="drop-content">
-                            <a class="drop-option" id="drop-01">example1</a>
-                            <a class="drop-option" id="drop-02">example2</a>
-                            <a class="drop-option" id="drop-03">example3</a>
-                            <a class="drop-option" id="drop-04">example4</a>
-                            <a class="drop-option" id="drop-05">example5</a>
+                <div class="button" id="category">
+                    <a>Category</a>
+                    <div class="dropdown">
+                        <div class="button drop-button" id="drop-00" onclick="buttonPress(0)">
+                            <div id="circle"></div>
+                            <a>All</a>
+                        </div>
+                        <div class="button drop-button" id="drop-11" onclick="buttonPress(11)">
+                            <div id="circle"></div>
+                            <a>Red</a>
+                        </div>
+                        <div class="button drop-button" id="drop-12" onclick="buttonPress(12)">
+                            <div id="circle"></div>
+                            <a>Blue</a>
+                        </div>
+                        <div class="button drop-button" id="drop-13" onclick="buttonPress(13)">
+                            <div id="circle"></div>
+                            <a>Green</a>
+                        </div>
+                        <div class="button drop-button" id="drop-14" onclick="buttonPress(14)">
+                            <div id="circle"></div>
+                            <a>Yellow</a>
                         </div>
                     </div>
                 </div>
-                <div class="button btn">
+                <div class="button" onclick="buttonPress(2)">
                     <div id="circle"></div>
-                    <a href="#">Next</a>
+                    <a>Next</a>
                 </div>
-                <div class="button btn">
+                <div class="button" onclick="buttonPress(3)">
                     <div id="circle"></div>
-                    <a href="#">Previous</a>
+                    <a>Previous</a>
                 </div>
-                <div class="button btn">
+                <div class="button" onclick="buttonPress(4)">
                     <div id="circle"></div>
-                    <a href="#">First</a>
+                    <a>First</a>
                 </div>
-                <div class="button btn">
+                <div class="button" onclick="buttonPress(5)">
                     <div id="circle"></div>
-                    <a href="#">Last</a>
+                    <a>Last</a>
                 </div>
-                <div class="button btn">
+                <div class="button" onclick="buttonPress(6)">
                     <div id="circle"></div>
-                    <a href="#">Random</a>
+                    <a>Random</a>
                 </div>
             </div>
-            <div class="item3"></div>
+            <div class="item3">
+                <div id="pic-box-01"></div>
+                <div id="pic-box-02"></div>
+                <div id="pic-box-03"></div>
+                <div id="pic-box-04"></div>
+                <div id="pic-box-05"></div>
+                <div id="pic-box-06"></div>
+            </div>
             <div class="item4"></div>
         </div>
     </body>
